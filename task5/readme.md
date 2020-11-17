@@ -4,29 +4,32 @@
 
 **任务内容：** 数据结构算法逻辑架构 - 数据结构实现方法（代码） - 测试案例
 
-**任务列表：**
-python实现单向链表数据结构及其基本方法  
-python实现单向循环链表数据结构及其方法  
-python实现双向链表基本结构及其基本方法  
-python实现双向循环链表基本结构及其基本方法  
-python实现堆栈数据结构及其基本方法  
-Python实现双端队列数据结构及其基本方法  
-python中的树数据结构  
-python实现二叉树及其基本方法  
-python实现二叉树数据结构的多种遍历方式  
-平衡二叉树简介  
-python实现冒泡排序算法  
-python实现选择排序算法  
-python实现插入排序算法  
-python实现快速排序  
-python实现希尔排序算法  
-python实现归并算法  
-python实现二分查找算法  
-python实现顺序查找和哈希查找算法  
-python中的哈希表数据结构  
-cupy功能探索(https://docs.cupy.dev/en/stable/)  
-Python数据挖掘方法案例(基于TPCH数据)  
-Python数据可视化探索(动态交互，类比Tableau,PowerBI功能，如Plotly等)  
-Python多线程(https://blog.csdn.net/weixin_40481076/article/details/101594705)  
+**完成任务后请进入readme.md修改对应任务前方框**
+
+**任务列表：**  
+- [x] 已完成示例
+- [ ] python实现单向链表数据结构及其基本方法  
+- [ ] python实现单向循环链表数据结构及其方法  
+- [ ] python实现双向链表基本结构及其基本方法  
+- [ ] python实现双向循环链表基本结构及其基本方法  
+- [ ] python实现堆栈数据结构及其基本方法  
+- [ ] Python实现双端队列数据结构及其基本方法  
+- [ ] python中的树数据结构  
+- [ ] python实现二叉树及其基本方法  
+- [ ] python实现二叉树数据结构的多种遍历方式  
+- [ ] 平衡二叉树简介  
+- [ ] python实现冒泡排序算法  
+- [ ] python实现选择排序算法  
+- [ ] python实现插入排序算法  
+- [ ] python实现快速排序  
+- [ ] python实现希尔排序算法  
+- [ ] python实现归并算法  
+- [ ] python实现二分查找算法  
+- [ ] python实现顺序查找和哈希查找算法  
+- [ ] python中的哈希表数据结构  
+- [ ] cupy功能探索(https://docs.cupy.dev/en/stable/)  
+- [ ] Python数据挖掘方法案例(基于TPCH数据)  
+- [ ] Python数据可视化探索(动态交互，类比Tableau,PowerBI功能，如Plotly等)  
+- [ ] Python多线程(https://blog.csdn.net/weixin_40481076/article/details/101594705)  
 
 **命名格式**：学号-对应任务名称-姓名

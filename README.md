@@ -1,5 +1,6 @@
 # 小组Github仓库使用说明
-为了方便小组成员之间的分享与学习，决定把小组思考题作通过Github进行保存。请朋友们完成思考题后，将相应的代码上传（add file → create new file）至Github各个思考题对应的repository folder中（思考题X对应taskX），并修改对应readme.md中的登记方框。
+为了方便小组成员之间的分享与学习，决定把小组思考题作通过Github进行保存。请朋友们完成思考题后，将相应的**代码**编写（add file → create new file）至Github各个思考题对应的repository folder中（思考题X对应taskX），并修改对应readme.md中的登记方框。
+**注意**：github的file中可正常使用markdown语法进行编辑，由于最后组长还需要把大家的技术文档整理成一个完整的文档提交给老师，所以请大家**直接在guihub上编写代码**，谢谢~
 
 **方框示例**  
 - [ ] 未完成任务  

@@ -1,0 +1,24 @@
+首先打开文件
+file=open('D:/xyh/学习/课件/大数据分析计算机基础/part.tbl','r')
+读取全部行变为元组
+lines=file.readlines()
+lines=tuple(lines)
+看一下第一行
+lines[0]
+'1|goldenrod lavender spring chocolate lace|Manufacturer#1|Brand#13|PROMO BURNISHED COPPER|7|JUMBO PKG|901.00|ly. slyly ironi|\n'
+
+对满足要求的条件求和
+sum=0
+i=0
+for line in lines:
+    ls=line.split('|')
+    if (int(ls[5])<15) & (ls[6]=='WRAP BOX'):
+        sum=sum+eval(ls[7])
+        i+=1
+    else:
+        continue
+print(sum,i)
+输出：
+180039.29999999996 132
+最后记得关闭文件
+file.close()

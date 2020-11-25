@@ -1,0 +1,6 @@
+# 2020103737_思考题3_张淼
+## 1.为part.tbl数据表的P_CONTAINER列建立字典表
+### 导入需要使用的包
+```python
+import pandas as pd
+```

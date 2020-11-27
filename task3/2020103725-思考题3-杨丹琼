@@ -1,6 +1,10 @@
-# 数据压缩字典的实现
+## 数据压缩字典的实现
 
-·
+```{python}
 import pandas as pd
 import time
-·
+
+part = pd.read_table('part.tbl', sep='|', header=None)
+del part[9]  # 去掉末尾竖线
+part.head()
+```

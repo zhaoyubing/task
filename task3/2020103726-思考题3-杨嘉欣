@@ -1,0 +1,80 @@
+#连接数据库
+import pymysql
+db = pymysql.connect("localhost","root","TPCH")
+#将每行数据生成字典
+mycursor = db.cursor(cursor=pymysql.cursors.DictCursor)  
+#使用execute()方法执行SQL语句
+mycursor.execute("SELECT P_CONTAINER FROM PART")
+print(my_cursor.description)
+#使用fetchall()获取全部数据
+data = mycursor.fetchall()
+
+
+# 1.为part.tbl数据表的P_CONTAINER列建立字典表，为P_CONTAINER列中每个值分配一个字典编码，字典表编码为自然数列
+
+
+import numpy as np
+
+#提取P_CONTAINER所有值
+p_container = []
+for i in data:
+    for v in i.values():
+        p_container.append(v)        
+#去除重复值
+uni_container = np.unique(p_container)
+#为每个值分配编码
+for i in uni_container:
+    dic_container = dict(zip(range(len(uni_container)),uni_container))
+    
+   
+# 2.生成压缩的P_CONTAINER列，内容为其原始值对应的字典编码
+
+
+con_container = []
+for i in p_container:
+    for k, v in dic_container.items():
+        if i == v :
+            con_container.append(k)
+   
+   
+# 3.在字典表中查找'WRAP BOX'对应的编码，然后在压缩的P_CONTAINER列上执行基于编码值的查找操作，统计满足条件的记录的数量（计数操作）
+
+
+#返回P_CONTAINER值对应编码
+def container_code(container):
+    for k,v in dic_container.items():
+        if v == container:
+            return k
+
+print(container_code('WRAP BOX'))
+
+#计算运行时间
+import datetime
+start = datetime.datetime.now() #获取开始时间
+#统计P_CONTAINER='WRAP BOX'的数量
+print(con_container.count(33))
+end = datetime.datetime.now() #获取结束时间
+print (end-start)
+
+
+# 4.对比原始P_CONTAINER列上的P_CONTAINER='WRAP BOX'条件计数操作
+
+
+#返回基于元素值统计的满足条件的记录的数量
+def container_num2(container):
+    num = 0
+    for i in p_container:
+        if i == container:
+            num += 1
+    return num
+
+#计算运行时间
+import datetime
+start = datetime.datetime.now() #获取开始时间
+#统计P_CONTAINER='WRAP BOX'的数量
+print(container_num2('WRAP BOX'))
+end = datetime.datetime.now() #获取结束时间
+print (end-start)
+
+
+# 对比两种方法的程序运行时间，使用压缩字典表为0.003923s，使用原始方法为0.014833s，说明使用字典表能够节省时间。
